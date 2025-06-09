@@ -1,0 +1,202 @@
+.container-carousel {
+    margin: 4.5rem 0;
+
+    .title {
+        font-size: 2rem;
+        margin-bottom: 1rem;
+        color: white;
+        font-weight: bold;
+    }
+}
+
+.card-close {
+    width: 200px;
+    height: 300px !important;
+
+    .card-body {
+        display: flex;
+        justify-content: start;
+        align-items: end;
+    }
+
+    .id {
+        font-size: 5.5rem;
+        color: black;
+        text-shadow: 0 0 15px white;
+        transform: translateX(-2rem);
+    }
+}
+
+.wrap-carousel {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    padding: 1rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.container-card-open {
+    position: absolute;
+    background-color: transparent;
+    top: 100%;
+    z-index: 9999;
+    right: 25%;
+
+    .card-open {
+        width: 50vw;
+
+        .card-header {
+            display: flex;
+            justify-content: end;
+            // padding: 1rem;
+            padding-right: 2rem;
+            border-radius: 10px 10px 0 0;
+            box-shadow: 0 0 8px silver;
+
+            height: 400px;
+            background-color: black;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+
+            .close-button {
+                position: absolute;
+                border: none;
+                font-size: 3rem;
+                background-color: transparent;
+                color: white;
+            }
+        }
+
+        .card-body {
+            background-color: #141414;
+            padding: 2rem;
+            border-radius: 0 0 10px 10px;
+            box-shadow: 0 0 8px silver;
+
+            .card-title {
+                font-size: 4rem;
+                margin-bottom: -4.5rem;
+                text-transform: uppercase;
+                color: white;
+                text-shadow: 0 0 2px white;
+                transform: translateY(-5rem);
+            }
+
+            .card-options {
+                margin-bottom: 0.5rem;
+
+                span {
+                    padding: 0.3rem 0.7rem;
+                    background-color: rgb(77, 74, 74);
+                    margin: 0 0.2rem;
+                    font-size: 1rem;
+                    text-transform: capitalize;
+                    font-weight: normal;
+                }
+            }
+
+            .card-description {
+                color: white;
+                margin-top: 1rem;
+            }
+
+            .card-button {
+                padding: 0.4rem 0.8rem;
+                color: white;
+                // width: 45%;
+                margin-left: 0.4rem;
+                font-size: 1.2rem;
+                background-color: #e50914;
+                border: none;
+                border-radius: 0.3rem;
+            }
+        }
+    }
+}
+
+.carousel-slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.carousel-control-prev {
+    left: -7rem !important;
+}
+
+.carousel-control-next {
+    right: -7rem !important;
+}
+
+@media screen and (max-width: 768px) {
+    .card-close {
+        width: 200px;
+        height: 200px !important;
+    }
+
+    .carousel-control-next,
+    .carousel-control-prev {
+        display: none !important;
+    }
+
+    .container-card-open {
+        right: 6.5%;
+        .card-open {
+            width: 85vw;
+
+            .card-body {
+                .card-title {
+                    font-size: 3rem;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 425px) {
+    .card-close {
+        width: 100px;
+        height: 150px !important;
+
+        .id {
+            font-size: 4rem;
+            transform: translate(-2rem, 2rem);
+        }
+    }
+
+    .carousel-control-next,
+    .carousel-control-prev {
+        display: none !important;
+    }
+
+    .container-card-open {
+        right: 2.5%;
+        .card-open {
+            width: 95vw;
+
+            .card-header {
+                height: 300px;
+            }
+
+            .card-body {
+                padding: 2rem 1rem 1rem 1rem;
+
+                .card-options {
+                    span {
+                        margin: .2rem;
+                    }
+                }
+
+                .card-title {
+                    font-size: 3rem;
+                }
+            }
+        }
+    }
+
+    .wrap-carousel {
+        padding: 0;
+    }
+}

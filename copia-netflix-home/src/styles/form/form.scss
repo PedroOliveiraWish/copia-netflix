@@ -1,0 +1,63 @@
+.form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .form-title {
+        p {
+            font-size: 1.1rem;
+            color: white;
+            font-weight: 500;
+        }
+    }
+    .form-field {
+        display: flex;
+        justify-content: space-between;
+        width: 40rem;
+
+        .email-input {
+            padding: 0.8rem 1.1rem;
+            width: 100%;
+            background-color: rgba(17, 17, 17, 0.4);
+            border: 1px solid rgb(124, 119, 119);
+            border-radius: 0.3rem;
+
+            &::placeholder {
+                color: silver;
+                font-weight: bold;
+            }
+        }
+
+        button {
+            padding: 0.4rem 0.8rem;
+            color: white;
+            width: 45%;
+            margin-left: 0.4rem;
+            font-size: 1.2rem;
+            font-weight: bold;
+            background-color: #e50914;
+            border: none;
+            border-radius: 0.3rem;
+        }
+    }
+}
+
+@media screen and (max-width: 425px) {
+    .form {
+        .form-title {
+            p {
+                font-size: .9rem;
+                font-weight: 400;
+            }
+        }
+
+        .form-field {
+            width: 85vw;
+
+            .email-input {
+                width: 70%;
+            }
+        }
+    }
+}

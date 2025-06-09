@@ -1,0 +1,85 @@
+.propaganda {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-top: 2rem;
+
+    .image {
+        img {
+            width: 9rem;
+            filter: drop-shadow(0 0 5px white);
+        }
+    }
+
+    .card-propaganda {
+        width: 100%;
+        background: linear-gradient(to right, #1b1533, #141532);
+        color: white;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1rem 2rem;
+        border-radius: 1.1rem;
+
+        .call-action {
+            button {
+                padding: 0.5rem 0.9rem;
+                background: rgba(128, 128, 128, 0.8);
+                border: none;
+                color: white;
+                font-weight: 500;
+                border-radius: 0.4rem;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .propaganda {
+        .card-propaganda {
+            justify-content: start;
+            align-items: start;
+            flex-direction: column;
+
+            .call-action {
+                button {
+                    margin-top: 1rem;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 425px) {
+    .propaganda {
+        flex-direction: column;
+        justify-content: start;
+        align-items: start;
+        margin-top: -2rem;
+
+        .image {
+            img {
+                width: 9rem;
+                transform: translateY(3rem);
+                filter: drop-shadow(0 0 15px white);
+            }
+        }
+
+        .card-propaganda {
+            justify-content: start;
+            align-items: start;
+            flex-direction: column;
+
+            .text {
+                margin-top: 1rem;
+            }
+
+            .call-action {
+                button {
+                    margin-top: 1rem;
+                }
+            }
+        }
+    }
+}
