@@ -25,17 +25,6 @@ export default function CardCarousel({
 }: CardProps) {
   const [isOpen, setIsOpen] = useState<boolean>(true);
 
-  useEffect(() => {
-    if (!isOpen) {
-      document.body.style.overflow = "hidden";
-    } else {
-      document.body.style.overflow = "unset"; 
-    }
-    return () => {
-      document.body.style.overflow = "unset"; 
-    };
-  }, [isOpen]);
-
   const openedCard = (
     <div className="container-card-open">
       <div className="card-open">
